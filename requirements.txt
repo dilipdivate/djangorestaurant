@@ -1,0 +1,33 @@
+django
+djangorestframework
+djangorestframework-simplejwt
+djangorestframework-jwt
+django-rest-auth
+django-allauth
+django-environ
+pygments
+psycopg2
+httpie
+django-cors-headers
+django-storages
+django-tinymce
+fontawesomefree
+django-crispy-forms
+crispy-bootstrap4
+django-bootstrap4
+django-recaptcha
+pillow
+six #PasswordTokenGenerator
+gunicorn
+
+# for the purposes of development
+# and testing there are a number of packages that are useful
+# to install.
+
+# Laying these out as separate requirements files, allows us to
+# only included the relevant sets when running tox, and ensures
+# we are only ever declaring our dependencies in one place.
+-r requirements/requirements-optionals.txt
+-r requirements/requirements-testing.txt
+-r requirements/requirements-documentation.txt
+-r requirements/requirements-packaging.txt
