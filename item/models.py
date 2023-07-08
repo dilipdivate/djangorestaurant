@@ -20,9 +20,9 @@ class Item(models.Model):
     cooking = models.BooleanField()
     sku = models.CharField(max_length=100)
     price = models.DecimalField(
-        decimal_places=2, default=0)
+        decimal_places=2, default=0, max_digits=4)
     quantity = models.FloatField(default=0, null=True, blank=True)
-    unit = models.PositiveSmallIntegerField(default=0, decimal_places=0)
+    unit = models.PositiveSmallIntegerField(default=0)
     recipe = models.TextField(null=True, blank=True)
     instructions = models.TextField(null=True, blank=True)
     createdAt = models.DateTimeField(auto_now_add=True)

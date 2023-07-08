@@ -22,9 +22,9 @@ class OrderItem(models.Model):
 
     sku = models.CharField(max_length=100)
     price = models.FloatField(default=0, null=True,
-                              blank=True, decimal_places=2)
+                              blank=True)
     discount = models.FloatField(
-        default=0, null=True, blank=True, decimal_places=2)
+        default=0, null=True, blank=True)
     quantity = models.FloatField(default=0, null=True, blank=True)
     unit = models.PositiveSmallIntegerField(default=0)
     createdAt = models.DateTimeField(auto_now_add=True)

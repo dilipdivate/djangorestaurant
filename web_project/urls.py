@@ -39,7 +39,8 @@ urlpatterns = [
     path('auth/', include('rest_framework.urls', namespace='rest_framework')),
     # path('gettoken/', obtain_auth_token),
     path('admin/', admin.site.urls),
-
+    path('tinymce/', include('tinymce.urls')),
+    path("", include("allauth.urls")),  # most important
     # path('jwt-auth/', obtain_jwt_token),
 
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name="reset_password.html"),

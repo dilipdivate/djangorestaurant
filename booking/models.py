@@ -41,7 +41,7 @@ class Booking(models.Model):
     firstName = models.CharField(max_length=50)
     middleName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
-    mobile = models.IntegerField(max_digits=10, decimal_places=0)
+    mobile = models.IntegerField()
     email = models.EmailField(max_length=50, unique=True)
     line1 = models.CharField(max_length=50)
     line2 = models.CharField(max_length=50)

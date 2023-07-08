@@ -33,7 +33,7 @@ class TableTop(models.Model):
             self.Status_Choices.DELIVERED,
         }
 
-    capacity = models.PositiveSmallIntegerField(default=0, decimal_places=0)
+    capacity = models.PositiveSmallIntegerField(default=0)
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now_add=True)
     content = models.TextField(null=True, blank=True)

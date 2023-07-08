@@ -38,24 +38,24 @@ class Order(models.Model):
         }
 
     subTotal = models.FloatField(
-        default=0, null=True, blank=True, decimal_places=2)
+        default=0, null=True, blank=True)
     itemDiscount = models.IntegerField(
-        default=0, null=True, blank=True, decimal_places=2)
-    tax = models.FloatField(default=0, null=True, blank=True, decimal_places=2)
+        default=0, null=True, blank=True)
+    tax = models.FloatField(default=0, null=True, blank=True)
     shipping = models.FloatField(
-        default=0, null=True, blank=True, decimal_places=2)
+        default=0, null=True, blank=True)
     total = models.FloatField(default=0, null=True,
-                              blank=True, decimal_places=2)
+                              blank=True)
     promo = models.IntegerField(
-        default=0, null=True, blank=True, decimal_places=2)
+        default=0, null=True, blank=True)
     discount = models.FloatField(
-        default=0, null=True, blank=True, decimal_places=2)
+        default=0, null=True, blank=True)
     grandTotal = models.FloatField(
-        default=0, null=True, blank=True, decimal_places=2)
+        default=0, null=True, blank=True)
     firstName = models.CharField(max_length=50)
     middleName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
-    mobile = models.IntegerField(max_digits=10, decimal_places=0)
+    mobile = models.IntegerField()
     email = models.EmailField(max_length=50, unique=True)
     line1 = models.CharField(max_length=50)
     line2 = models.CharField(max_length=50)

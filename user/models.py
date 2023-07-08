@@ -75,7 +75,7 @@ class User(AbstractBaseUser):
     middleName = models.CharField(max_length=50, blank=True, null=True)
     lastName = models.CharField(max_length=50)
     username = models.CharField(max_length=50, unique=True)
-    mobile = models.IntegerField(max_digits=10, default='1234567890', validators=[
+    mobile = models.IntegerField(default='1234567890', validators=[
         validate_digit_length])
 
     email = models.EmailField(max_length=50, verbose_name="email", unique=True)
